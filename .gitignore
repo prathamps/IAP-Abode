@@ -21,7 +21,7 @@ wheels/
 # Virtual Environments
 # ==============================
 venv/
-.env/
+LlamaIndex/.env/
 .venv/
 env/
 ENV/
@@ -29,7 +29,7 @@ ENV/
 # ==============================
 # Environment Variables / Secrets
 # ==============================
-.env
+LlamaIndex/.env
 .env.*
 *.env
 *.key
@@ -56,7 +56,7 @@ logs/
 
 
 # Large datasets
-data/
+LlamaIndex/data/
 datasets/
 *.csv
 *.tsv

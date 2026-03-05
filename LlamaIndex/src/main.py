@@ -14,7 +14,7 @@ from llama_index.core.selectors.utils import get_selector_from_llm
 api_key = os.getenv("GOOGLE_API_KEY")
 llama_parser_api_key = os.getenv("LLAMA_CLOUD_API_KEY")
 
-Settings.llm = GoogleGenAI(model="gemini-2.5-flash", api_key=api_key)
+Settings.llm = GoogleGenAI(model="gemini-2.5-flash-lite", api_key=api_key)
 Settings.embed_model = GoogleGenAIEmbedding(model_name="gemini-embedding-001", api_key=api_key)
 
 
@@ -22,7 +22,7 @@ parser = LlamaParse(
     api_key= llama_parser_api_key,
     result_type="markdown",
 )
-documents = parser.load_data("data/test_doc.pdf")
+documents = parser.load_data("data/clean_code.pdf")
 
 vectorIndex=VectorStoreIndex.from_documents(documents)
 summaryIndex=SummaryIndex.from_documents(documents)
